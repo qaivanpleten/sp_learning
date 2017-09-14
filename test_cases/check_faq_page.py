@@ -19,11 +19,11 @@ class CheckFaqPage(SetUpClass):
         general_action.check_element_on_page(mp_element.hamburger_menu_button())
 
         # check footer elements
-        general_action.check_element_on_page(mp_element.footer_whyus())
-        general_action.check_element_on_page(mp_element.footer_company())
-        general_action.check_element_on_page(mp_element.footer_career())
-        general_action.check_element_on_page(mp_element.footer_faq())
-        general_action.check_element_on_page(mp_element.footer_contact())
+        # general_action.check_element_on_page(mp_element.footer_whyus())
+        # general_action.check_element_on_page(mp_element.footer_company())
+        # general_action.check_element_on_page(mp_element.footer_career())
+        # general_action.check_element_on_page(mp_element.footer_faq())
+        # general_action.check_element_on_page(mp_element.footer_contact())
 
 
     def test_page_element(self):

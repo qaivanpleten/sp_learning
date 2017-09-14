@@ -7,7 +7,7 @@ from elements.main_page_elements import MainPageElements
 
 class CheckMainPageElements(SetUpClass):
     def test_general_elements(self):
-        # global general_action, mp_element
+        time.sleep(5)
 
         general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
@@ -21,33 +21,43 @@ class CheckMainPageElements(SetUpClass):
         # check footer elements
         general_action.check_element_on_page(mp_element.footer_whyus())
         mp_element.footer_whyus().click()
+        time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#why')
         general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         general_action.check_element_on_page(mp_element.footer_company())
         mp_element.footer_company().click()
+        time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#about')
         general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         general_action.check_element_on_page(mp_element.footer_career())
         mp_element.footer_career().click()
+        time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#careers')
         general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         general_action.check_element_on_page(mp_element.footer_faq())
         mp_element.footer_faq().click()
+        time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#faq')
         general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         general_action.check_element_on_page(mp_element.footer_contact())
         mp_element.footer_contact().click()
+        time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#contact')
-        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+
 
     def test_intro_block(self):
         general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
-
+        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
         mp_element.sidebar_intro().click()
         time.sleep(2)
 
@@ -70,31 +80,34 @@ class CheckMainPageElements(SetUpClass):
         general_action.check_active_button_in_sidebar('transform: matrix(1, 0, 0, 1, 0, -16);')
 
     def test_problem_block(self):
-        generar_action = GeneralActions(self.driver)
+        general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
+        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         mp_element.sidebar_problem().click()
         time.sleep(2)
 
         # check that problem block is displayed
-        generar_action.check_active_button_in_sidebar('transform: matrix(1, 0, 0, 1, 0, -16);')
+        general_action.check_active_button_in_sidebar('transform: matrix(1, 0, 0, 1, 0, -16);')
 
         # check block elements
-        generar_action.check_element_on_page(mp_element.howitworks_title())
+        general_action.check_element_on_page(mp_element.howitworks_title())
 
-        generar_action.scroll_page('1400')
+        general_action.scroll_page('1400')
         time.sleep(2)
 
-        generar_action.check_element_on_page(mp_element.ten_reason_to_love_button())
+        general_action.check_element_on_page(mp_element.ten_reason_to_love_button())
 
         # check button
         mp_element.ten_reason_to_love_button().click()
-        generar_action.check_url('http://console.dev.sonikpass.com/#why')
-        generar_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        general_action.check_url('http://console.dev.sonikpass.com/#why')
 
     def test_solution_block(self):
         general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
+        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         mp_element.sidebar_solution().click()
         time.sleep(2)
@@ -113,11 +126,12 @@ class CheckMainPageElements(SetUpClass):
         # check button
         mp_element.faq_button().click()
         general_action.check_url('http://console.dev.sonikpass.com/#faq')
-        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
 
     def test_usages_block(self):
         general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
+        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         mp_element.sidebar_usagecases().click()
         time.sleep(2)
@@ -146,6 +160,8 @@ class CheckMainPageElements(SetUpClass):
     def test_partner_block(self):
         general_action = GeneralActions(self.driver)
         mp_element = MainPageElements(self.driver)
+        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
+        time.sleep(3)
 
         mp_element.sidebar_partner().click()
         time.sleep(3)
@@ -161,8 +177,6 @@ class CheckMainPageElements(SetUpClass):
         # check button
         mp_element.meet_team_button().click()
         general_action.check_url('http://console.dev.sonikpass.com/#about')
-        general_action.open_page_by_url('http://console.dev.sonikpass.com/')
-
 
 class CheckHamburgerMenu(SetUpClass):
     def test_hamburger_faq(self):

@@ -128,19 +128,19 @@ class MainPageElements:
     # sidebar buttons
 
     def sidebar_intro(self):
-        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[1]/a/span')
+        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[1]/a')
 
     def sidebar_problem(self):
-        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[2]/a/span')
+        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[2]/a')
 
     def sidebar_solution(self):
-        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[3]/a/span')
+        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[3]/a')
 
     def sidebar_usagecases(self):
-        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[4]/a/span')
+        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[4]/a')
 
     def sidebar_partner(self):
-        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[5]/a/span')
+        return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul/li[5]/a')
 
     def sidebar(self):
         return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul')

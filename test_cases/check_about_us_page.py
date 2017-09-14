@@ -19,11 +19,11 @@ class CheckAboutUsPage(SetUpClass):
         general_action.check_element_on_page(mp_element.hamburger_menu_button())
 
         # check footer elements
-        general_action.check_element_on_page(mp_element.footer_whyus())
-        general_action.check_element_on_page(mp_element.footer_company())
-        general_action.check_element_on_page(mp_element.footer_career())
-        general_action.check_element_on_page(mp_element.footer_faq())
-        general_action.check_element_on_page(mp_element.footer_contact())
+        # general_action.check_element_on_page(mp_element.footer_whyus())
+        # general_action.check_element_on_page(mp_element.footer_company())
+        # general_action.check_element_on_page(mp_element.footer_career())
+        # general_action.check_element_on_page(mp_element.footer_faq())
+        # general_action.check_element_on_page(mp_element.footer_contact())
 
     def test_elements_display(self):
         general_action = GeneralActions(self.driver)
@@ -55,7 +55,7 @@ class CheckAboutUsPage(SetUpClass):
         general_action = GeneralActions(self.driver)
         about_element = AboutPageElements(self.driver)
         general_action.open_page_by_url('http://console.dev.sonikpass.com/#about')
-
+        time.sleep(2)
         general_action.click_on_button(about_element.open_positions_button())
         time.sleep(2)
         general_action.check_url('http://console.dev.sonikpass.com/#careers')
