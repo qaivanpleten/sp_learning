@@ -3,7 +3,7 @@ import time
 from actions.general_actions import GeneralActions
 from actions.setup_class import SetUpClass
 from elements.main_page_elements import MainPageElements
-from elements.pricing_elements import PricingPageElements
+from elements.pricing_page_elements import PricingPageElements
 
 
 class CheckPricingPage(SetUpClass):

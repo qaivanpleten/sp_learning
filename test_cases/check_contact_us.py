@@ -1,6 +1,6 @@
 from actions.general_actions import GeneralActions
 from actions.setup_class import SetUpClass
-from elements.contact_us_elements import ContactPageElements
+from elements.contact_us_page_elements import ContactPageElements
 from elements.main_page_elements import MainPageElements
 
 

@@ -20,7 +20,7 @@ class GeneralActions(BasePage):
         assert value in MainPageElements(self.driver).sidebar().get_attribute('style')
 
     def scroll_page(self, value):
-        self.driver.execute_script("window.scrollTo(0, " + value +  ")")
+        self.driver.execute_script("window.scrollTo(0, " + value + ")")
 
     def check_url(self, link):
         assert link in self.driver.current_url
