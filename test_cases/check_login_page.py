@@ -1,6 +1,7 @@
 import time
 
 from actions.general_actions import GeneralActions
+from actions.login_actions import LoginActions
 from actions.setup_class import SetUpClass
 from elements.login_page_elements import LoginPageElements
 from elements.main_page_elements import MainPageElements
@@ -38,3 +39,12 @@ class CheckLoginPageElements(SetUpClass):
         general_action.check_element_on_page(login_element.use_automatic_button())
         general_action.check_element_on_page(login_element.text_block())
 
+class LoginCancel(SetUpClass):
+    def test_cancel_login(self):
+        LoginActions(self.driver).login_cancel('any@email.com')
+
+
+class LoginFullTest(SetUpClass):
+    def test_login(self):
+        LoginActions(self.driver).login_full_case('test@selenium.ua')
+        GeneralActions(self.driver).check_url("http://console.stage.sonikpass.com/#welcome")

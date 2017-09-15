@@ -8,7 +8,7 @@ class SetUpClass(unittest.TestCase):
         cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(10)
-        cls.driver.get("http://console.dev.sonikpass.com/")
+        cls.driver.get("http://console.stage.sonikpass.com/")
 
     @classmethod
     def tearDownClass(cls):

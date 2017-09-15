@@ -2,7 +2,7 @@ import unittest
 
 from test_cases.check_about_us_page import CheckAboutUsPage
 from test_cases.check_career_page import CheckCareerPage
-from test_cases.check_contact_us import CheckContactUsPage
+from test_cases.check_contact_page import CheckContactUsPage
 from test_cases.check_faq_page import CheckFaqPage
 from test_cases.check_install_page import CheckInstallPage
 from test_cases.check_integration_page import CheckIntegrationPage

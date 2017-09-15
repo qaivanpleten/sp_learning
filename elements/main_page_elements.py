@@ -144,3 +144,20 @@ class MainPageElements:
 
     def sidebar(self):
         return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/ul')
+
+    # popups
+
+    def login_dialog(self):
+        return self.driver.find_element_by_xpath('//*[@class="page-try"]/div[2]')
+
+    def dialog_title(self):
+        return self.driver.find_element_by_id('dialog-title')
+
+    def dialog_username_input(self):
+        return self.driver.find_element_by_id('dialog-username-input')
+
+    def dialog_next_button(self):
+        return self.driver.find_element_by_id('dialog-confirm')
+
+    def dialog_cancel_button(self):
+        return self.driver.find_element_by_id('dialog-cancel')
