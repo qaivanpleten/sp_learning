@@ -1,8 +1,8 @@
-from actions.general_actions import GeneralActions
-from actions.login_actions import LoginActions
-from actions.setup_class import SetUpClass
-from elements.main_page_elements import MainPageElements
-from elements.welcome_page_elements import WelcomePageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.login_actions import LoginActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.main_page_elements import MainPageElements
+from sp_at.elements.welcome_page_elements import WelcomePageElements
 
 
 class CheckWelcomePage(SetUpClass):
@@ -28,4 +28,3 @@ class CheckWelcomePage(SetUpClass):
         # general_action.check_element_on_page(mp_element.footer_career())
         # general_action.check_element_on_page(mp_element.footer_faq())
         # general_action.check_element_on_page(mp_element.footer_contact())
-

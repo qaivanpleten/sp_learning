@@ -1,9 +1,9 @@
 import time
 
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.main_page_elements import MainPageElements
-from elements.setup_page_elements import SetupPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.main_page_elements import MainPageElements
+from sp_at.elements.setup_page_elements import SetupPageElements
 
 
 class CheckSetupPage(SetUpClass):

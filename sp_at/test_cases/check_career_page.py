@@ -1,8 +1,8 @@
-from actions.career_page_actions import CareerPageActions
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.career_page_elements import CareerPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.career_page_actions import CareerPageActions
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.career_page_elements import CareerPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckCareerPage(SetUpClass):
@@ -41,4 +41,3 @@ class CheckCareerPage(SetUpClass):
         general_action.open_page_by_url('http://console.dev.sonikpass.com/#careers')
         general_action.click_on_button(car_element.faq_button())
         general_action.check_url('http://console.dev.sonikpass.com/#faq')
-

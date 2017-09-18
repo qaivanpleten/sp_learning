@@ -1,10 +1,10 @@
 import time
 
-from actions.general_actions import GeneralActions
-from actions.login_actions import LoginActions
-from actions.setup_class import SetUpClass
-from elements.login_page_elements import LoginPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.login_actions import LoginActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.login_page_elements import LoginPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckLoginPageElements(SetUpClass):
@@ -38,6 +38,7 @@ class CheckLoginPageElements(SetUpClass):
         general_action.check_element_on_page(login_element.signup_button())
         general_action.check_element_on_page(login_element.use_automatic_button())
         general_action.check_element_on_page(login_element.text_block())
+
 
 class LoginCancel(SetUpClass):
     def test_cancel_login(self):

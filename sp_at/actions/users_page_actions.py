@@ -1,6 +1,7 @@
-from actions.general_actions import GeneralActions
 from actions.login_actions import LoginActions
-from elements.welcome_page_elements import WelcomePageElements
+
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.elements.welcome_page_elements import WelcomePageElements
 
 
 class UsersPageActions:

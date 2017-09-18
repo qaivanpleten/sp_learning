@@ -1,9 +1,9 @@
 import time
 
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.install_page_elements import InstallPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.install_page_elements import InstallPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckInstallPage(SetUpClass):
@@ -53,7 +53,6 @@ class CheckInstallPage(SetUpClass):
         general_action.click_on_button(install_element.troubleshooting_button_download())
         general_action.check_element_on_page(install_element.troubleshooting_text_download())
 
-
     def test_ios_buttons(self):
         general_action = GeneralActions(self.driver)
         install_element = InstallPageElements(self.driver)
@@ -62,5 +61,3 @@ class CheckInstallPage(SetUpClass):
 
         general_action.click_on_button(install_element.install_on_ios())
         general_action.check_url('https://beta.itunes.apple.com/v1/app/1140636912')
-
-

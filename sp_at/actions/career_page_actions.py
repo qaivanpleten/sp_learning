@@ -1,4 +1,4 @@
-from elements.career_page_elements import CareerPageElements
+from sp_at.elements.career_page_elements import CareerPageElements
 
 
 class BasePage(object):
