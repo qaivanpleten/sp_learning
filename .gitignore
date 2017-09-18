@@ -2,3 +2,4 @@
 .DS_Store
 .idea/
 __pycache__/
+sp_learning/sp_at/ignore_these_cases
