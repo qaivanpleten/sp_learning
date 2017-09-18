@@ -1,8 +1,8 @@
-import unittest, time
+import time
 
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckMainPageElements(SetUpClass):
@@ -51,7 +51,6 @@ class CheckMainPageElements(SetUpClass):
         mp_element.footer_contact().click()
         time.sleep(3)
         general_action.check_url('http://console.dev.sonikpass.com/#contact')
-
 
     def test_intro_block(self):
         general_action = GeneralActions(self.driver)
@@ -177,6 +176,7 @@ class CheckMainPageElements(SetUpClass):
         # check button
         mp_element.meet_team_button().click()
         general_action.check_url('http://console.dev.sonikpass.com/#about')
+
 
 class CheckHamburgerMenu(SetUpClass):
     def test_hamburger_faq(self):

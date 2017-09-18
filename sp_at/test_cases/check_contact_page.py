@@ -1,7 +1,7 @@
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.contact_us_page_elements import ContactPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.contact_us_page_elements import ContactPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckContactUsPage(SetUpClass):

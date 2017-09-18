@@ -1,9 +1,7 @@
-import unittest, time
-
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.faq_page_elements import FaqPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.faq_page_elements import FaqPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckFaqPage(SetUpClass):
@@ -25,12 +23,10 @@ class CheckFaqPage(SetUpClass):
         # general_action.check_element_on_page(mp_element.footer_faq())
         # general_action.check_element_on_page(mp_element.footer_contact())
 
-
     def test_page_element(self):
         general_action = GeneralActions(self.driver)
         f_element = FaqPageElements(self.driver)
         general_action.open_page_by_url('http://console.dev.sonikpass.com/#faq')
-
 
         general_action.check_element_on_page(f_element.faq_page_title())
         general_action.check_element_on_page(f_element.technology_title())

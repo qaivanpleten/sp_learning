@@ -1,9 +1,9 @@
 import time
 
-from actions.general_actions import GeneralActions
-from elements.login_page_elements import LoginPageElements
-from elements.main_page_elements import MainPageElements
-from elements.welcome_page_elements import WelcomePageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.elements.login_page_elements import LoginPageElements
+from sp_at.elements.main_page_elements import MainPageElements
+from sp_at.elements.welcome_page_elements import WelcomePageElements
 
 
 class LoginActions:

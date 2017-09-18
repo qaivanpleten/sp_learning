@@ -1,17 +1,18 @@
 import unittest
 
-from test_cases.check_about_us_page import CheckAboutUsPage
-from test_cases.check_career_page import CheckCareerPage
-from test_cases.check_contact_page import CheckContactUsPage
-from test_cases.check_faq_page import CheckFaqPage
-from test_cases.check_install_page import CheckInstallPage
-from test_cases.check_integration_page import CheckIntegrationPage
-from test_cases.check_login_page import CheckLoginPageElements
-from test_cases.check_main_page import CheckMainPageElements, CheckHamburgerMenu
-from test_cases.check_pricing_page import CheckPricingPage
-from test_cases.check_privacy_page import CheckPrivacyPage
-from test_cases.check_setup_page import CheckSetupPage
-from test_cases.check_signup_page import CheckSignUpPage
+from sp_at.test_cases.check_about_us_page import CheckAboutUsPage
+from sp_at.test_cases.check_career_page import CheckCareerPage
+from sp_at.test_cases.check_contact_page import CheckContactUsPage
+from sp_at.test_cases.check_faq_page import CheckFaqPage
+from sp_at.test_cases.check_install_page import CheckInstallPage
+from sp_at.test_cases.check_integration_page import CheckIntegrationPage
+from sp_at.test_cases.check_login_page import CheckLoginPageElements
+from sp_at.test_cases.check_main_page import CheckMainPageElements, CheckHamburgerMenu
+from sp_at.test_cases.check_pricing_page import CheckPricingPage
+from sp_at.test_cases.check_privacy_page import CheckPrivacyPage
+from sp_at.test_cases.check_setup_page import CheckSetupPage
+from sp_at.test_cases.check_signup_page import CheckSignUpPage
+from sp_at.test_cases.check_why_page import CheckWhyPage
 
 main_page_elements = unittest.TestLoader().loadTestsFromTestCase(CheckMainPageElements)
 main_page_hamburger = unittest.TestLoader().loadTestsFromTestCase(CheckHamburgerMenu)
@@ -26,9 +27,10 @@ install_page = unittest.TestLoader().loadTestsFromTestCase(CheckInstallPage)
 login_page = unittest.TestLoader().loadTestsFromTestCase(CheckLoginPageElements)
 signup_page = unittest.TestLoader().loadTestsFromTestCase(CheckSignUpPage)
 privacy_page = unittest.TestLoader().loadTestsFromTestCase(CheckPrivacyPage)
+why_page = unittest.TestLoader().loadTestsFromTestCase(CheckWhyPage)
 
 smoke_test = unittest.TestSuite((main_page_elements, main_page_hamburger, about_us_page, career_page, contact_us_page,
-                                faq_page, integration_page, pricing_page, setup_page, install_page, login_page,
-                                 signup_page, privacy_page))
+                                 faq_page, integration_page, pricing_page, setup_page, install_page, login_page,
+                                 signup_page, privacy_page, why_page))
 
 unittest.TextTestRunner(verbosity=2).run(smoke_test)

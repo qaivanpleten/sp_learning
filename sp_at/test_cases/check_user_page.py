@@ -1,9 +1,9 @@
 import time
 
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from actions.users_page_actions import UsersPageActions
-from elements.users_page_elements import UsersPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.actions.users_page_actions import UsersPageActions
+from sp_at.elements.users_page_elements import UsersPageElements
 
 
 class CheckUsersPageElements(SetUpClass):
@@ -19,7 +19,3 @@ class CheckUsersPageElements(SetUpClass):
         general_actions.check_element_on_page(users_element.list_of_emails())
         general_actions.check_element_on_page(users_element.content_left())
         general_actions.check_element_on_page(users_element.content_right())
-
-
-
-

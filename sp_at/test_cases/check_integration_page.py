@@ -1,7 +1,7 @@
-from actions.general_actions import GeneralActions
-from actions.setup_class import SetUpClass
-from elements.integration_page_elements import IntegrationPageElements
-from elements.main_page_elements import MainPageElements
+from sp_at.actions.general_actions import GeneralActions
+from sp_at.actions.setup_class import SetUpClass
+from sp_at.elements.integration_page_elements import IntegrationPageElements
+from sp_at.elements.main_page_elements import MainPageElements
 
 
 class CheckIntegrationPage(SetUpClass):
