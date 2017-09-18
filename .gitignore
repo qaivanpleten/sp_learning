@@ -1,5 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 .DS_Store
 .idea/
-__pycache__/
-sp_learning/sp_at/ignore_these_cases
+__pycache__
+/home/user/PycharmProjects/sp_learning/sp_at/ignore_these_cases
