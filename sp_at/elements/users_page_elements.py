@@ -51,3 +51,6 @@ class UsersPageElements:
     def cancel_delete_button(self):
         return self.driver.find_element_by_id('dialog-cancel')
 
+    def sonik_pass_domen(self):
+        return "@selenium.dp"
+
