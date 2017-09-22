@@ -2,6 +2,9 @@ class MainPageElements:
     def __init__(self, driver):
         self.driver = driver
 
+    def url(self):
+        return 'http://console.stage.sonikpass.com/'
+
     # general elements, footer
     def logo(self):
         return self.driver.find_element_by_xpath('//*[@id="app-container"]/a/div[2]')

@@ -16,14 +16,3 @@ class SetUpClass(unittest.TestCase):
 
     if __name__ == '__main__':
         unittest.main(verbosity=2)
-
-
-@pytest.fixture
-def fixture_webdriver() -> webdriver:
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.implicitly_wait(10)
-    driver.get("http://console.stage.sonikpass.com/")
-
-    yield driver
-    driver.quit()

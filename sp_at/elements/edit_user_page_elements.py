@@ -83,4 +83,3 @@ class EditUsersPageElements:
 
     def session_id(self):
         return "9bowj66"
-

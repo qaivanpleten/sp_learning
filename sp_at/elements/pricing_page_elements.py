@@ -13,6 +13,3 @@ class PricingPageElements:
 
     def try_button(self):
         return self.driver.find_element_by_xpath('//*[@id="flex_center"]/p[3]/a[2]/button')
-
-
-
