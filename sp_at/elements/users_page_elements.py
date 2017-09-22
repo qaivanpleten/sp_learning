@@ -52,5 +52,12 @@ class UsersPageElements:
         return self.driver.find_element_by_id('dialog-cancel')
 
     def sonik_pass_domen(self):
-        return "@selenium.dp"
+        return "@selenium.bb"
+
+    def admin_email(self):
+        return "admin@selenium.bb"
+
+    def first_user_in_list(self):
+        return self.driver.find_element_by_xpath('//*[@id="users-region"]/table/tbody/tr/td[1]')
+
 
