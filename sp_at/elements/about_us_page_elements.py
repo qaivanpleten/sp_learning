@@ -16,4 +16,3 @@ class AboutPageElements:
 
     def get_in_touch_button(self):
         return self.driver.find_element_by_xpath('//*[@id="sub-region"]/div/section/div[8]/div/p/a[2]/button')
-

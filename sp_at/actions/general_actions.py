@@ -27,5 +27,3 @@ class GeneralActions(BasePage):
 
     def open_page_by_url(self, url):
         self.driver.get(url)
-
-

@@ -20,7 +20,6 @@ class SignUpPageElements:
     def lname_input(self):
         return self.driver.find_element_by_id('user-surname')
 
-
     def email_title(self):
         return self.driver.find_element_by_xpath('//*[@id="section0"]/div/div[2]/div/form/div[3]/label')
 

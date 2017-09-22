@@ -22,4 +22,3 @@ class FaqPageElements:
 
     def try_it_now_button(self):
         return self.driver.find_element_by_xpath('//*[@id="flex_center"]/p[2]/a[2]/button')
-

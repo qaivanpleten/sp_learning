@@ -15,7 +15,7 @@ class EditUsersPageActions:
     def delete_user(self):
         EditUsersPageElements(self.driver).delete_button().click()
         UsersPageElements(self.driver).confirm_delete_button().click()
-        time.sleep(1)
+        time.sleep(5)
 
     def cancel_deleting_user(self):
         EditUsersPageElements(self.driver).delete_button().click()
@@ -25,7 +25,7 @@ class EditUsersPageActions:
 
     def suspend_user(self):
         EditUsersPageElements(self.driver).suspend_button().click()
-        time.sleep(1)
+        time.sleep(3)
 
     def change_username(self, name):
         username = EditUsersPageElements(self.driver).username_input()
@@ -167,11 +167,10 @@ class EditUsersPageActions:
             phone_input.send_keys(str(number))
             username.click()
             time.sleep(5)
-            #assert phone_input.get_attribute('value') == str(number)
+            # assert phone_input.get_attribute('value') == str(number)
 
             a += 1
             x += 1
-
 
     def search_session_id(self, session_id):
         element = EditUsersPageElements(self.driver)

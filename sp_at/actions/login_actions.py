@@ -22,7 +22,7 @@ class LoginActions:
 
         login_elements.use_automatic_button().click()
         login_elements.login_button().click()
-        time.sleep(40)
+        time.sleep(35)
 
     def login_cancel(self, email):
         main_elements = MainPageElements(self.driver)
