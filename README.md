@@ -3,8 +3,11 @@
 Command to run all test-cases in folder
 
 ``` 
-py.test src/modules/example/test/
+py.test -v [path to folder]
 ```
+or run ```py.test -v``` command in derictory with test-scripts 
+
+
 
 Allure
 1. Run all tests and store in report folder
