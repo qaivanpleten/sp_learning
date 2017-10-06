@@ -7,6 +7,8 @@ py.test -v [path to folder]
 ```
 or run ```py.test -v``` command in derictory with test-scripts 
 
+To run separate test run ```py.test -v [path to test]```
+
 
 
 Allure
