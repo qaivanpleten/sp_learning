@@ -1,6 +1,6 @@
 # sp_learning
 
-Command to run all test-cases in folder
+## Command to run all test-cases in folder
 
 ``` 
 py.test -v [path to folder]
@@ -11,7 +11,8 @@ To run separate test run ```py.test -v [path to test]```
 
 
 
-Allure
+## Allure
+
 1. Run all tests and store in report folder
 ```
 py.test --alluredir=report [path to test-script or folder with tests]
