@@ -1,4 +1,7 @@
 import time
+
+import allure
+import pytest
 from faker import Faker
 from sp_at.actions.edit_users_page_actions import EditUsersPageActions
 from sp_at.actions.general_actions import GeneralActions
@@ -7,6 +10,9 @@ from sp_at.elements.edit_user_page_elements import EditUsersPageElements
 from sp_at.elements.users_page_elements import UsersPageElements
 
 
+@pytest.allure.severity(pytest.allure.severity_level.MINOR)
+@allure.feature('Check user page features')
+@allure.story('Check general elements')
 def test_page_element(fixture_webdriver):
     general_action = GeneralActions(fixture_webdriver)
     page_element = EditUsersPageElements(fixture_webdriver)
@@ -25,6 +31,9 @@ def test_page_element(fixture_webdriver):
     EditUsersPageActions(fixture_webdriver).delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Delete user')
 def test_delete_user_confirm(fixture_webdriver):
     element = UsersPageElements(fixture_webdriver)
 
@@ -35,6 +44,9 @@ def test_delete_user_confirm(fixture_webdriver):
         "textContent"), "First email in the list should be admin@selenium.dp"
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Cancel user deleting')
 def test_delete_user_cancel(fixture_webdriver):
     element = UsersPageElements(fixture_webdriver)
     UsersPageActions(fixture_webdriver).open_edit_user_page()
@@ -47,6 +59,9 @@ def test_delete_user_cancel(fixture_webdriver):
     UsersPageActions(fixture_webdriver).confirm_user_deleting()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Suspend user')
 def test_suspend_user(fixture_webdriver):
     element = UsersPageElements(fixture_webdriver)
 
@@ -57,12 +72,18 @@ def test_suspend_user(fixture_webdriver):
         "textContent"), "First email in the list should be admin@selenium.dp"
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change user role')
 def test_change_role(fixture_webdriver):
     UsersPageActions(fixture_webdriver).open_edit_user_page()
     EditUsersPageActions(fixture_webdriver).change_role()
     EditUsersPageActions(fixture_webdriver).delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change username')
 def test_change_username(fixture_webdriver):
     element = UsersPageElements(fixture_webdriver)
 
@@ -76,6 +97,9 @@ def test_change_username(fixture_webdriver):
     UsersPageActions(fixture_webdriver).confirm_user_deleting()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change first name')
 def test_change_first_name(fixture_webdriver):
     action = EditUsersPageActions(fixture_webdriver)
 
@@ -88,6 +112,9 @@ def test_change_first_name(fixture_webdriver):
     action.delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change last name')
 def test_change_last_name(fixture_webdriver):
     action = EditUsersPageActions(fixture_webdriver)
 
@@ -100,6 +127,9 @@ def test_change_last_name(fixture_webdriver):
     action.delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change email')
 def test_change_email(fixture_webdriver):
     action = EditUsersPageActions(fixture_webdriver)
 
@@ -112,6 +142,9 @@ def test_change_email(fixture_webdriver):
     action.delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Change phone number')
 def test_change_phone_number(fixture_webdriver):
     action = EditUsersPageActions(fixture_webdriver)
 
@@ -125,6 +158,9 @@ def test_change_phone_number(fixture_webdriver):
     action.delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Add new email')
 def test_add_emails(fixture_webdriver):
     UsersPageActions(fixture_webdriver).open_edit_user_page()
     EditUsersPageActions(fixture_webdriver).add_email()
@@ -137,12 +173,18 @@ def test_add_emails(fixture_webdriver):
 #     EditUsersPageActions(fixture_webdriver).delete_email()
 #     EditUsersPageActions(fixture_webdriver).delete_user()
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Add new phone number')
 def test_add_phone_number(fixture_webdriver):
     UsersPageActions(fixture_webdriver).open_edit_user_page()
     EditUsersPageActions(fixture_webdriver).add_phone_number()
     EditUsersPageActions(fixture_webdriver).delete_user()
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check user page features')
+@allure.story('Search session ID')
 def test_search_session_id(fixture_webdriver):
     UsersPageActions(fixture_webdriver).open_admin_details_page()
 

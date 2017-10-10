@@ -1,10 +1,15 @@
+import allure
+import pytest
+
 from sp_at.actions.general_actions import GeneralActions
 from sp_at.actions.login_actions import LoginActions
 from sp_at.elements.main_page_elements import MainPageElements
 from sp_at.elements.users_page_elements import UsersPageElements
 from sp_at.elements.welcome_page_elements import WelcomePageElements
 
-
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check Welcome page features')
+@allure.story('Check general elements')
 def test_page_elements(fixture_webdriver):
     general_action = GeneralActions(fixture_webdriver)
     mp_element = MainPageElements(fixture_webdriver)

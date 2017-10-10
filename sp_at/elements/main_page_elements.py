@@ -3,7 +3,7 @@ class MainPageElements:
         self.driver = driver
 
     def url(self):
-        return 'http://console.stage.sonikpass.com/'
+        return 'http://console.sonikpass.com/'
 
     # general elements, footer
     def logo(self):

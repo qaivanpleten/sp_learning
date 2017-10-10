@@ -1,9 +1,15 @@
 import time
 
+import allure
+import pytest
+
 from sp_at.actions.general_actions import GeneralActions
 from sp_at.elements.main_page_elements import MainPageElements
 
 
+@pytest.allure.severity(pytest.allure.severity_level.MINOR)
+@allure.feature('Check elements on Main page')
+@allure.story('General elements')
 def test_general_elements(fixture_webdriver):
     time.sleep(5)
     page_url = MainPageElements(fixture_webdriver).url()
@@ -52,6 +58,9 @@ def test_general_elements(fixture_webdriver):
     general_action.check_url(page_url + '#contact')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on Main page')
+@allure.story('Intro block elements')
 def test_intro_block(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
 
@@ -81,6 +90,9 @@ def test_intro_block(fixture_webdriver):
     general_action.check_active_button_in_sidebar('transform: matrix(1, 0, 0, 1, 0, -16);')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on Main page')
+@allure.story('Problem block elements')
 def test_problem_block(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
 
@@ -108,6 +120,9 @@ def test_problem_block(fixture_webdriver):
     general_action.check_url(page_url + '#why')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on Main page')
+@allure.story('Solution block elements')
 def test_solution_block(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
 
@@ -135,6 +150,9 @@ def test_solution_block(fixture_webdriver):
     general_action.check_url(page_url + '#faq')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on Main page')
+@allure.story('Usages block elements')
 def test_usages_block(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
 
@@ -168,6 +186,9 @@ def test_usages_block(fixture_webdriver):
     time.sleep(2)
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on Main page')
+@allure.story('Partner block elements')
 def test_partner_block(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -191,6 +212,9 @@ def test_partner_block(fixture_webdriver):
     general_action.check_url(page_url + '#about')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('FAQ page')
 def test_hamburger_faq(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -205,6 +229,9 @@ def test_hamburger_faq(fixture_webdriver):
     general_action.check_url(page_url + '#faq')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('AboutUs page')
 def test_hamburger_about(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -219,6 +246,9 @@ def test_hamburger_about(fixture_webdriver):
     general_action.check_url(page_url + '#about')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Career page')
 def test_hamburger_career(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -233,6 +263,9 @@ def test_hamburger_career(fixture_webdriver):
     general_action.check_url(page_url + '#careers')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Contact page')
 def test_hamburger_contact(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -247,6 +280,9 @@ def test_hamburger_contact(fixture_webdriver):
     general_action.check_url(page_url + '#contact')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Usecases page')
 def test_hamburger_usecases(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -261,6 +297,9 @@ def test_hamburger_usecases(fixture_webdriver):
     general_action.check_url(page_url + '#usecases')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Pricing page')
 def test_hamburger_pricing(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -275,6 +314,9 @@ def test_hamburger_pricing(fixture_webdriver):
     general_action.check_url(page_url + '#pricing')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Integration page')
 def test_hamburger_integration(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -289,6 +331,9 @@ def test_hamburger_integration(fixture_webdriver):
     general_action.check_url(page_url + '#integration')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Setup page')
 def test_hamburger_setup(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -303,6 +348,9 @@ def test_hamburger_setup(fixture_webdriver):
     general_action.check_url(page_url + '#setup')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Install page')
 def test_hamburger_install(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -317,6 +365,9 @@ def test_hamburger_install(fixture_webdriver):
     general_action.check_url(page_url + '#install')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Login page')
 def test_hamburger_login(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -331,6 +382,9 @@ def test_hamburger_login(fixture_webdriver):
     general_action.check_url(page_url + '#login')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('SignUp page')
 def test_hamburger_signup(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -345,6 +399,9 @@ def test_hamburger_signup(fixture_webdriver):
     general_action.check_url(page_url + '#signup')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('WhyUs page')
 def test_hamburger_why(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)
@@ -359,6 +416,9 @@ def test_hamburger_why(fixture_webdriver):
     general_action.check_url(page_url + '#why')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check elements on hamburger menu')
+@allure.story('Privacy page')
 def test_hamburger_privacy(fixture_webdriver):
     page_url = MainPageElements(fixture_webdriver).url()
     general_action = GeneralActions(fixture_webdriver)

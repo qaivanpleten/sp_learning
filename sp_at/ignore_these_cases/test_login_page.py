@@ -1,5 +1,8 @@
 import time
 
+import allure
+import pytest
+
 from sp_at.actions.general_actions import GeneralActions
 from sp_at.actions.login_actions import LoginActions
 from sp_at.elements.login_page_elements import LoginPageElements
@@ -7,6 +10,9 @@ from sp_at.elements.main_page_elements import MainPageElements
 from sp_at.elements.users_page_elements import UsersPageElements
 
 
+@pytest.allure.severity(pytest.allure.severity_level.MINOR)
+@allure.feature('Check login page features')
+@allure.story('Check general elements')
 def test_general_elements(fixture_webdriver):
     general_action = GeneralActions(fixture_webdriver)
     mp_element = MainPageElements(fixture_webdriver)
@@ -24,6 +30,9 @@ def test_general_elements(fixture_webdriver):
     # general_action.check_element_on_page(mp_element.footer_contact())
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check login page features')
+@allure.story('Check Login page elements')
 def test_page_elements(fixture_webdriver):
     general_action = GeneralActions(fixture_webdriver)
     login_element = LoginPageElements(fixture_webdriver)
@@ -40,10 +49,16 @@ def test_page_elements(fixture_webdriver):
     general_action.check_element_on_page(login_element.text_block())
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check login page features')
+@allure.story('Login canceling')
 def test_cancel_login(fixture_webdriver):
     LoginActions(fixture_webdriver).login_cancel('any@email.com')
 
 
+@pytest.allure.severity(pytest.allure.severity_level.NORMAL)
+@allure.feature('Check login page features')
+@allure.story('Login on the site')
 def test_login(fixture_webdriver):
     LoginActions(fixture_webdriver).login_full_case(UsersPageElements(fixture_webdriver).admin_email())
     GeneralActions(fixture_webdriver).check_url(MainPageElements(fixture_webdriver).url() + '#welcome')
