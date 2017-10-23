@@ -11,7 +11,7 @@ from sp_at.pages.main_elements import MainElements
 @allure.feature('Check elements on AboutUs page')
 @allure.story('General elements')
 def test_general_elements(fixture_webdriver):
-    AboutUsPage.open(fixture_webdriver)
+    AboutUsPage(fixture_webdriver).open()
     assert MainElements.present_header_elements(fixture_webdriver), "The header of Why page is broken"
 
 
@@ -19,17 +19,16 @@ def test_general_elements(fixture_webdriver):
 @allure.feature('Check elements on AboutUs page')
 @allure.story('AboutUs page elements')
 def test_aboutus_elements(fixture_webdriver):
-    AboutUsPage.open(fixture_webdriver)
-    assert AboutUsPage.present_body_elements(fixture_webdriver), "Body elements aren't displayed"
+    AboutUsPage().open()
+    assert AboutUsPage().present_body_elements(), "Body elements aren't displayed"
 
 
 @pytest.allure.severity(pytest.allure.severity_level.NORMAL)
 @allure.feature('Check elements on AboutUs page')
 @allure.story('AboutUs page buttons')
 def test_buttons(fixture_webdriver):
-    AboutUsPage.open(fixture_webdriver)
-    assert AboutUsPage.open_position_button_work(
-        fixture_webdriver), "Button isn't working. Or button doesn't redirect to corresponding page"
+    AboutUsPage.open()
+    assert AboutUsPage().open_position_button_work(), "Button isn't working. Or button doesn't redirect to corresponding page"
 
 # @pytest.allure.severity(pytest.allure.severity_level.MINOR)
 # @allure.feature('Check elements on AboutUs page')
