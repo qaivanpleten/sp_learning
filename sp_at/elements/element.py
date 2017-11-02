@@ -48,3 +48,5 @@ class RetryOnFailure(Element):
         except:
             time.sleep(1)
             return self._el.instance()
+
+
